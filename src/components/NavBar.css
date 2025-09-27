@@ -1,0 +1,64 @@
+/* Minimalist sticky navbar styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+  backdrop-filter: saturate(140%) blur(8px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: hsl(var(--foreground));
+  gap: 0.6rem;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-text {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius);
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+  background: hsl(var(--muted));
+}
+
+.nav-link.active {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  box-shadow: var(--shadow-elegant);
+}
